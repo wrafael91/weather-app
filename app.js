@@ -1,27 +1,19 @@
 (() => {
-    const Http = new XMLHttpRequest();
-    //const $bogotaData = document.getElementById('bogota-data');
-    //const $fragment = document.createDocumentFragment();
     const url = "http://api.openweathermap.org/data/2.5/weather?q=Bogota&appid=5be15f27f180f07259d63b580db53929";
-    Http.addEventListener('readystatechange', (event) => {
-        if (Http.readyState !== 4) return;
-        //console.log(Http)
+    const bogotaHttps = new XMLHttpRequest();
 
-        if (Http.status >=200 && Http.status <300) {
-            //console.log(Http.responseText);
-            let json = JSON.parse(Http.responseText);
-            console.log(json);
-            // json.forEach((element) =>{
-            //     const $li = document.createElement('li');
-            //     $li.innerHTML = `${element.name} -- ${element.email}`;
-            //     $fragment.appendChild($li);
-            // });
-            //$bogotaData.appendChild($fragment);
-        } else {
-            console.log("error");
+    bogotaHttps.open("GET", url);
+
+    bogotaHttps.addEventListener('load', (data) => {
+        const dataJSON = JSON.parse(data.target.response);
+
+        const list = document.getElementById('bog-list');
+        for (const weatherInfo of dataJSON) {
+            const listItem = document.createElement('LI');
+            listItem.textContent = `${weatherInfo.main} -- ${weatherInfo.weather[1]}`
+            list.appendChild(listItem)
         }
+    })
 
-    });
-    Http.open("GET", url);
-    Http.send();
+    bogotaHttps.send();
 })()
