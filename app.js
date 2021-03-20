@@ -9,11 +9,9 @@ bogotaHttps.addEventListener('load', (data) => {
     const { icon, description } = dataJSON.weather[0];
     const { temp } = dataJSON.main;
     document.querySelector('.bog-temp').innerText = (temp-273.15) + '°C';
-    document.querySelector('.icon').src = "https://openweathermap.org/img/wn/" + icon + ".png";
+    document.querySelector('.icon-bog').src = "https://openweathermap.org/img/wn/" + icon + ".png";
     document.querySelector('.description').innerText = description;
     
-})
+});
 bogotaHttps.send();
-
-//3 Days Forecast Section
 
