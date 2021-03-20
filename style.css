@@ -19,22 +19,26 @@ section {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-end;
+    justify-content:flex-end;
 }
 
-.hero-banner h3 {
-    padding: 20px;
+.bog-title {
+    margin-left: 20px;
+    font-size: 15px;
 }
 
-.forecast {
-    position: relative;
+.weather-description {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
+    margin-left: 20px;
 }
 
-.three-days ul {
-    list-style: none;
+.description {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-size: 10px;
+    text-transform: capitalize;
 }
 
 .weather-box {
@@ -47,6 +51,14 @@ section {
     padding: 5px;
     margin-bottom: 5px;
 }
-.bogota-data {
-    color: #000;
+
+.forecast {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.three-days ul {
+    list-style: none;
 }
