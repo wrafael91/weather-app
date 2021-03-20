@@ -8,6 +8,8 @@ section {
     padding: 15px;
 }
 
+/* BOGOTÁ BANNER */
+
 .hero-banner {
     position: relative;
     height: 50vh;
@@ -24,7 +26,7 @@ section {
 
 .bog-title {
     margin-left: 20px;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .weather-description {
@@ -37,20 +39,11 @@ section {
 .description {
     margin-left: 20px;
     margin-bottom: 20px;
-    font-size: 10px;
+    font-size: 15px;
     text-transform: capitalize;
 }
 
-.weather-box {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid #000;
-    border-radius: 5px;
-    padding: 5px;
-    margin-bottom: 5px;
-}
+/* 3 Days Section */
 
 .forecast {
     position: relative;
@@ -61,4 +54,80 @@ section {
 
 .three-days ul {
     list-style: none;
+}
+
+.three-days .title-threeDays {
+    font-size: 25px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.weather-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 15px;
+    margin-bottom: 5px;
+}
+
+.weather-box .status-1 {
+    font-size: 10px;
+    text-transform: capitalize;
+}
+
+.weather-box .status-2 {
+    font-size: 10px;
+    text-transform: capitalize;
+}
+
+.weather-box .status-3 {
+    font-size: 10px;
+    text-transform: capitalize;
+}
+
+.weather-box .icon-box {
+    height: auto;
+    width: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.weather-box .temp-1 {
+    font-size: 12px;
+    border: 1px solid #7D85F5;
+    background-color: #7D85F5;
+    padding: 23px 5px 23px 5px;
+    border-radius: 15px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.weather-box .temp-2 {
+    font-size: 12px;
+    border: 1px solid #AEB2F8;
+    background-color: #AEB2F8;
+    padding: 23px 5px 23px 5px;
+    border-radius: 15px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.weather-box .temp-3 {
+    font-size: 12px;
+    border: 1px solid #AEB2F8;
+    background-color: #AEB2F8;
+    padding: 23px 5px 23px 5px;
+    border-radius: 15px;
+    color: #fff;
+    font-weight: 500;
+}
+
+
+
+.weather-box .day-box {
+    padding: 0px 10px 0px 10px;
 }

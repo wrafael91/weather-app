@@ -3,7 +3,7 @@
 const bogotaSecondDay = "http://api.openweathermap.org/data/2.5/forecast?lat=4.60971&lon=-74.081749&appid=5be15f27f180f07259d63b580db53929";
 const bogotaHttpsSecondDay = new XMLHttpRequest();
 
-bogotaHttpsSecondDay.open("GET", bogotaSecondDay);
+bogotaHttpsSecondDay.open("GET", bogotaSecondDay, true);
 
 bogotaHttpsSecondDay.addEventListener('load', (data) => {
     const dataJSON2 = JSON.parse(data.target.response);
@@ -16,22 +16,12 @@ bogotaHttpsSecondDay.addEventListener('load', (data) => {
     console.log(dayName2);  
     //Display information on client side.
     const { icon, description } = dataJSON2.list[12].weather[0];
-    const { temp } = dataJSON2.list[12].main;
+    const { temp_min, temp_max } = dataJSON2.list[12].main;
     document.querySelector('.icon-2').src = "https://openweathermap.org/img/wn/" + icon + ".png";
     document.querySelector('.status-2').innerText = description;
-    document.querySelector('.temp-2').innerText = (Math.round(temp-273.15)) + '°C';
+    document.querySelector('.temp-2').innerText = (Math.round(temp_max-273.15)) + '°C' + "/" + (Math.round(temp_min-273.15)) + '°C';
     document.querySelector('.day-2').innerText = dayName2;
     
 });
 bogotaHttpsSecondDay.send();
 
-// {
-//     "id": 3688689,
-//     "name": "Bogotá",
-//     "state": "",
-//     "country": "CO",
-//     "coord": {
-//         "lon": -74.081749,
-//         "lat": 4.60971
-//     }
-// },
