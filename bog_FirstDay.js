@@ -6,17 +6,17 @@ const bogotaHttps1 = new XMLHttpRequest();
 bogotaHttps1.open("GET", bogotaFirstDay, true);
 
 bogotaHttps1.addEventListener('load', (data) => {
-    const dataJSON2 = JSON.parse(data.target.response);
-    console.log(dataJSON2);
+    const dataJSON1 = JSON.parse(data.target.response);
+    console.log(dataJSON1);
     //Day 1
     //Get date/time format translated into days label.
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Sunday"];
-    let getStringDaysInfo = new Date(dataJSON2.list[4].dt * 1000);
+    let getStringDaysInfo = new Date(dataJSON1.list[4].dt * 1000);
     let dayName = days[getStringDaysInfo.getDay()];
     console.log(dayName);  
     //Display information on client side.
-    const { icon, description } = dataJSON2.list[4].weather[0];
-    const { temp_min, temp_max } = dataJSON2.list[4].main;
+    const { icon, description } = dataJSON1.list[4].weather[0];
+    const { temp_min, temp_max } = dataJSON1.list[4].main;
     document.querySelector('.icon-1').src = "https://openweathermap.org/img/wn/" + icon + ".png";
     document.querySelector('.status-1').innerText = description;
     document.querySelector('.temp-1').innerText = (Math.round(temp_max-273.15)) + '°C' + "/" + (Math.round(temp_min-273.15)) + '°C';

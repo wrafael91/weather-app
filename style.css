@@ -8,6 +8,10 @@ section {
     padding: 15px;
 }
 
+.container {
+    flex-wrap: wrap;
+}
+
 /* BOGOTÁ BANNER */
 
 .hero-banner {
@@ -50,6 +54,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .three-days ul {
@@ -140,6 +145,10 @@ section {
 
 /* Top Reviews */
 
+.top-reviews-box {
+    flex-wrap: wrap;
+}
+
 .top-reviews {
     display: flex;
     justify-content: space-between;
@@ -162,4 +171,57 @@ section {
     width: 205px;
     height: 115px;
     border-radius: 25px;
+}
+
+/*France Forecast*/
+
+.lyon-weather {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hum-speed, .paris-weather {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lyon-box {
+    border: 1px solid #000;
+    border-radius: 15px;
+}
+
+.paris-box {
+    border: 1px solid #000;
+    border-radius: 15px;
+}
+
+.hum-lyon, .speed-lyon,
+.hum-paris, .speed-paris {
+    font-size: 12px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 772px) {
+    .lyon-box, .paris-box, .top-reviews-box {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 772px) {
+    .lyon-box, .paris-box, .top-reviews-box {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 560px) {
+    .france-forecast {
+        flex-wrap: wrap;
+    }
+    .place-visit img{
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
